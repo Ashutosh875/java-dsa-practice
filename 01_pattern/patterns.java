@@ -302,7 +302,7 @@ class Pattern
 
 
 
-public class ex1_1 {
+public class patterns {
 
   public static void main(String[] args) {
 
