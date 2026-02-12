@@ -1,4 +1,4 @@
-public class printingNTimes {
+public class Rec_02_printNtimes {
 
   //Printing name N times using recursion
   public static void printName(int i , int n){
@@ -8,10 +8,10 @@ public class printingNTimes {
   }
 
   //Printing 1 to N
-  public static void printNumber(int i , int n){
+  public static void print1ToN(int i , int n){
     if(i > n) return;
     System.out.println(i);
-    printNumber(i+1, n);
+    print1ToN(i+1, n);
   }
 
   //Printing N to 1
@@ -23,7 +23,7 @@ public class printingNTimes {
 
   public static void main(String[] args) {
     printName(1, 5);
-    printNumber(1, 5);
+    print1ToN(1, 5);
     printNto1(5, 5);
   }
 }

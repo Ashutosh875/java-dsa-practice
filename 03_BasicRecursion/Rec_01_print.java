@@ -1,4 +1,4 @@
-public class AprintUsingRecursion {
+public class Rec_01_print {
 
   public static void main(String[] args) {
     // recursion function called
