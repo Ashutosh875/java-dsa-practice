@@ -1,4 +1,4 @@
-public class printUsingRecursion {
+public class AprintUsingRecursion {
 
   public static void main(String[] args) {
     // recursion function called
@@ -12,9 +12,9 @@ public class printUsingRecursion {
     // infinite recursion calls and run out of memory
     if(count == 10)
       // when condition is met function returns and 
-      // terminates all the functions waiting waiting in stack
+      // terminates all the functions waiting in stack
       return;
-    System.out.println(count - 1);
+    System.out.println(count+1);
 
     // function calls itself resulting into a recursion 
     recFn(count + 1);
