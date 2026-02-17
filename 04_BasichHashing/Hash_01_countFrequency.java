@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class Hash_01_countFrequency {
 
   // counting frequency of an integer in an array
@@ -27,12 +29,32 @@ public class Hash_01_countFrequency {
 
     return hash[ch - 'a'];
   }
+
+  //counting frequency using Map
+  public static int countFreqUsingMap(int n , int[] arr){
+    HashMap<Integer,Integer> hash = new HashMap<>();
+    for(int i=0 ; i<arr.length ; i++){
+      hash.put(arr[i], (hash.getOrDefault(arr[i], 0)+1));
+    }
+    return hash.get(n);
+  }
+
   public static void main(String[] args) {
     
     int[] arr = {1,3,3,2,3,1,2,2,3,12};
     System.out.println(countIntFreq(3, 12, arr));
 
     System.out.println(countCharFreq('z', "azbbaacdz"));
+
+    System.out.println(countFreqUsingMap(3, arr));
+
+    /* 
+    * Using array for counting frequency has a cap
+    * and it generated the array of size for max value of element present in size , resulting in inefficient 
+    * use of memory 
+    * so with hashmap no duplicate values are allowed and ot will take only those element which
+    * are present in array
+    */
 
   }
 }
