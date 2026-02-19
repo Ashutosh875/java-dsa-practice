@@ -26,6 +26,7 @@ public class Sort_01_SelectionSort {
     * observation here is Loop iterates over an index 0 to last index 
     * and with each iteration starting index increments by 1 upto 
     * second-last index 
+    * the worst , best and average time complexity is O(N²)
     */
   }
 }
