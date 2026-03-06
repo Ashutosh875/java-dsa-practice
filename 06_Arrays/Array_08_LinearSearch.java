@@ -12,7 +12,7 @@ public class Array_08_LinearSearch {
 
   public static void main(String[] args) {
     
-    int index = linearSearch(new int[] {1,3,4,5,4,6,7,8} , 10);
+    int index = linearSearch(new int[] {1,3,4,5,4,6,7,8} , 8);
     System.out.println(index);
   }
 }
