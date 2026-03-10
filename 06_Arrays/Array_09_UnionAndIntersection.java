@@ -49,6 +49,48 @@ class UnionAndIntersection{
 
   }
 
+  public void intersection(int arr1[] , int arr2[]){
+
+    List<Integer> inter = new ArrayList<>();
+
+    //optimized Tc = O(n1 + n2)
+    int i=0 , j=0;
+    
+    while( i<arr1.length && j<arr2.length){
+
+      if(arr1[i] < arr2[j]){
+        i++;
+      }else if(arr1[i] > arr2[j]){
+        j++;
+      }else{
+        inter.add(arr1[i]);
+        i++;
+        j++;
+      }
+
+    }
+      
+    // brute force TC = O(n²)
+    // int[] vis = new int[arr2.length];
+    
+    // for(int i=0; i<arr1.length; i++){
+    //   for(int j=0; j<arr2.length; j++){
+    //     if(arr1[i] == arr2[j] && vis[j] == 0){
+    //       inter.add(arr1[i]);
+    //       vis[j] = 1;
+    //       break;
+    //     }
+    //   }
+    // }
+
+
+    //print
+    for(int x : inter){
+      System.out.print(x + " ");
+    }
+
+  }
+
 
 
 }
@@ -60,6 +102,9 @@ public class Array_09_UnionAndIntersection {
 
     obj.union(new int[] {1,1,2,2,3,4,4}, new int[] {1,1,2,2,3,3,3,4,4,4,4,5});
 
+    System.out.println();
+
+    obj.intersection(new int[] {1,1,2,2,3,4,5}, new int[] {1,2,2,4,4,5,6});
 
   }
 }
